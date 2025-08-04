@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float horInput;
-    public float moveSpeed;
+    private float horInput =10f;
+    public float moveSpeed = 8f;
     public float jumpSpeed;
     
     // Start is called before the first frame update
