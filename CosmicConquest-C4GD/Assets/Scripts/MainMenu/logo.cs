@@ -8,7 +8,7 @@ public class Example : MonoBehaviour
     float m_XAxis, m_YAxis;
     public float speed = 1f;
     public float magnitude = 20f; // divide by 3 to shorten the curve dip
-    public float offset = 280f; // The base Y position
+    public float offset = 210f; // The base Y position
     private float _time = 0f;
 
     void Start()
