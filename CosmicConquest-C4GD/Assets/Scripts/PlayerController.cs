@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horInput = Input.GetAxisRaw("Horizontial");
+        horInput = Input.GetAxisRaw("Horizontal");
         float nextVelocityX = horInput * moveSpeed;
         float nextVelocityY = rb.velocity.y;
         if (Input.GetKeyDown(KeyCode.Space))
