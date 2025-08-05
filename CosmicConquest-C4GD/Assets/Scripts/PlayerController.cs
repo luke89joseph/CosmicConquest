@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheckPoint;
     public LayerMask groundLayer;
     float groundCheckRadius = 0.2f;
+    public GameObject projectilePrefab;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,10 @@ public class PlayerController : MonoBehaviour
             
         }
         rb.velocity = new Vector2(nextVelocityX, nextVelocityY);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
     }
     bool checkGround()
     {
