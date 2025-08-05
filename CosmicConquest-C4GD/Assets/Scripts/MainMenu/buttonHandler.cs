@@ -18,10 +18,4 @@ public class MainMenu : MonoBehaviour
     {
         startButton.onClick.AddListener(StartButtonPressed);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
