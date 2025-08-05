@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     float groundCheckRadius = 0.2f;
     public GameObject projectilePrefab;
+<<<<<<< Updated upstream
     private float activeSpeed;
     public float dashSpeed;
     public float dashLength = 0.5f;
@@ -20,13 +21,18 @@ public class PlayerController : MonoBehaviour
     private float dashCounter;
     private float dashCoolCounter;
     private Animator anim;
+=======
+>>>>>>> Stashed changes
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+<<<<<<< Updated upstream
         anim = GetComponent<Animator>();
         activeSpeed = moveSpeed;
+=======
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -46,6 +52,7 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+<<<<<<< Updated upstream
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (dashCoolCounter <= 0 && dashCounter <= 0)
@@ -70,6 +77,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", checkGround());
         anim.SetFloat("ySpeed", nextVelocityY);
         anim.SetFloat("xSpeed", Mathf.Abs(nextVelocityX));
+=======
+>>>>>>> Stashed changes
     }
     bool checkGround()
     {
