@@ -191,8 +191,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &241576599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,7 +256,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ef12717802efb469420085ed38969d, type: 3}
->>>>>>> Stashed changes
 --- !u!1 &550032834
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +643,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1876933654571889323, guid: 9efa4dc29bbaa6d41936a458e2011815, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 158072442029887059, guid: 9efa4dc29bbaa6d41936a458e2011815, type: 3}
       propertyPath: m_Name
       value: triggerForEnemyRight
@@ -791,6 +792,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6917261584884387881, guid: 4e531c96666a82d46b28fffb305773d2, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 158072442029887059, guid: 4e531c96666a82d46b28fffb305773d2, type: 3}
       propertyPath: m_Name
       value: triggerForEnemyLeft
@@ -3729,8 +3734,6 @@ SceneRoots:
   - {fileID: 1930693961}
   - {fileID: 634516483}
   - {fileID: 1627632487}
-<<<<<<< Updated upstream
-=======
   - {fileID: 1467210776}
   - {fileID: 1079162828}
->>>>>>> Stashed changes
+  - {fileID: 241576599}
