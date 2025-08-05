@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7415251107918316480}
   - component: {fileID: 3014576461914316252}
   m_Layer: 0
-  m_Name: triggerForEnemy
-  m_TagString: Untagged
+  m_Name: triggerForEnemyLeft
+  m_TagString: LeftTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,8 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed = 5f;
-    public float leftMost;
-    public float rightMost;
+    private bool isLeft = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +17,27 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime * speed);
+        if (isLeft)
+        {
+            transform.Translate(Vector2.left * Time.deltaTime * speed);
+        }
+        else
+        {
+            transform.Translate(Vector2.right * Time.deltaTime * speed);
+        }
         
 
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("LeftTrigger"))
+        {
+            isLeft = false;
+        }
+        if (collision.gameObject.CompareTag("RightTrigger"))
+        {
+            isLeft = true;
+        }
+    }
+    
 }
