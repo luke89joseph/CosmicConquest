@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,18 +14,25 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     float groundCheckRadius = 0.2f;
     public GameObject projectilePrefab;
-    
+    private float activeSpeed;
+    public float dashSpeed;
+    public float dashLength = 0.5f;
+    public float dashCoolDown = 1f;
+    private float dashCounter;
+    private float dashCoolCounter;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        activeSpeed = moveSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
         horInput = Input.GetAxisRaw("Horizontal");
-        float nextVelocityX = horInput * moveSpeed;
+        float nextVelocityX = horInput * activeSpeed;
         float nextVelocityY = rb.velocity.y;
         bool isGrounded = checkGround();
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -36,6 +44,27 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if(dashCoolCounter <= 0 && dashCounter <= 0)
+            {
+                activeSpeed = dashSpeed;
+                dashCounter = dashLength;
+            }
+        }
+        if (dashCounter > 0)
+        {
+            dashCounter -= Time.deltaTime;
+            if(dashCounter <= 0)
+            {
+                activeSpeed = moveSpeed;
+                dashCoolCounter = dashCoolDown;
+            }
+        }
+        if (dashCoolCounter > 0)
+        {
+            dashCoolCounter -= Time.deltaTime;
         }
     }
     bool checkGround()

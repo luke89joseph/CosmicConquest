@@ -678,6 +678,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   projectilePrefab: {fileID: 161990037161868114, guid: 71059a2cab1457341be82ae0aee24fe7, type: 3}
+  dashSpeed: 25
+  dashLength: 0.25
+  dashCoolDown: 1
 --- !u!212 &634516482
 SpriteRenderer:
   m_ObjectHideFlags: 0
