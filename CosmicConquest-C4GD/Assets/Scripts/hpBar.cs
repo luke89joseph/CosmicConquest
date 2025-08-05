@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class hpBar : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class hpBar : MonoBehaviour
 
     public Image bg;
     public Image bar;
+    public TextMeshProUGUI label;
 
     float curr;
     float max;
@@ -29,17 +31,18 @@ public class hpBar : MonoBehaviour
         percent = curr / max;
 
         bar.fillAmount = percent;
+        label.text = "" + Mathf.RoundToInt(percent * 100) + "%";
         //print(percent);
 
         if (percent >= 0.7f)
         {
             bg.color = new Color(0f, 0.2f, 0f);
-            bar.color = Color.green;
+            bar.color = new Color(0f, 0.502f, 0f);
         }
         else if (percent >= 0.4f)
         {
             bg.color = new Color(1.0f, 0.502f, 0.0f);
-            bar.color = Color.yellow;
+            bar.color = new Color(1.0f, 0.678f, 0.2f);
         }
         else
         {
