@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     float groundCheckRadius = 0.2f;
     public GameObject projectilePrefab;
+
+    private Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,10 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
+
+        anim.SetBool("Grounded", checkGround());
+        anim.SetFloat("ySpeed", nextVelocityY);
+        anim.SetFloat("xSpeed", Mathf.Abs(nextVelocityX));
     }
     bool checkGround()
     {
