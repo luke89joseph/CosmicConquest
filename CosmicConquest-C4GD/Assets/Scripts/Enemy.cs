@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -7,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 5f;
     public bool isLeft = true;
+    public float health = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,10 @@ public class Enemy : MonoBehaviour
         {
             transform.Translate(Vector2.right * Time.deltaTime * speed);
         }
-        
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +42,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("RightTrigger"))
         {
             isLeft = true;
+        }
+        if (collision.gameObject.CompareTag("projectile"))
+        {
+            Destroy(collision.gameObject);
+            health--;
         }
     }
     

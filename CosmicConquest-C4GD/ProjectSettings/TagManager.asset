@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftTrigger
   - RightTrigger
+  - projectile
   layers:
   - Default
   - TransparentFX
