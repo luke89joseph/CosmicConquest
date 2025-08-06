@@ -1164,6 +1164,7 @@ MonoBehaviour:
   dashSpeed: 25
   dashLength: 0.25
   dashCoolDown: 1
+  dashCounter: 0
 --- !u!212 &634516482
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1527,6 +1528,7 @@ GameObject:
   - component: {fileID: 844439373}
   - component: {fileID: 844439372}
   - component: {fileID: 844439371}
+  - component: {fileID: 844439376}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1639,6 +1641,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &844439376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844439370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368ea3efd218f411d94e7d050d9595fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 634516478}
+  circle: {fileID: 393109825}
 --- !u!1 &1003302194
 GameObject:
   m_ObjectHideFlags: 0

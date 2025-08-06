@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed;
     public float dashLength = 0.5f;
     public float dashCoolDown = 1f;
-    private float dashCounter;
+    public float dashCounter;
     private float dashCoolCounter;
     private Animator anim;
     
