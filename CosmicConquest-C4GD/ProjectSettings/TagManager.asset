@@ -9,6 +9,7 @@ TagManager:
   - projectile
   - Enemy
   - Death Screen
+  - Wall
   layers:
   - Default
   - TransparentFX
