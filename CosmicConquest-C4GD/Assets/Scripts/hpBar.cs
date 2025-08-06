@@ -32,14 +32,7 @@ public class hpBar : MonoBehaviour
             max = player.GetComponent<Health>().maxHP;
 
             percent = curr / max;
-
-            if (player == null)
-            {
-                percent = 0f;
-                label.text = "0%";
-                bar.fillAmount = 0f;
-            }
-
+            
             bar.fillAmount = percent;
             label.text = "" + Mathf.RoundToInt(percent * 100) + "%";
             //print(percent);
@@ -60,6 +53,29 @@ public class hpBar : MonoBehaviour
                 bar.color = Color.red;
             }
 
+        }
+        else
+        {
+            percent = 0f;
+            bar.fillAmount = percent;
+            label.text = "" + Mathf.RoundToInt(percent * 100) + "%";
+            //print(percent);
+
+            if (percent >= 0.7f)
+            {
+                bg.color = new Color(0f, 0.2f, 0f);
+                bar.color = new Color(0f, 0.502f, 0f);
+            }
+            else if (percent >= 0.4f)
+            {
+                bg.color = new Color(1.0f, 0.502f, 0.0f);
+                bar.color = new Color(1.0f, 0.678f, 0.2f);
+            }
+            else
+            {
+                bg.color = new Color(0.6f, 0.149f, 0f);
+                bar.color = Color.red;
+            }
         }
     }
 }
