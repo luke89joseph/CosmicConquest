@@ -3709,7 +3709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc62e551d5c78e43a3401ce02a20c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 634516478}
   deathScreen: {fileID: 1232901093}
 --- !u!114 &1560667897
 MonoBehaviour:

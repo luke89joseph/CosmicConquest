@@ -1363,7 +1363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc62e551d5c78e43a3401ce02a20c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 494933536}
+  deathScreen: {fileID: 157344039}
 --- !u!114 &682946862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1515,6 +1516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  deathScreen: {fileID: 0}
 --- !u!114 &684452787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9668,6 +9670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 494933536}
   circle: {fileID: 991529392}
+  deathScreen: {fileID: 0}
 --- !u!114 &2066552610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9681,6 +9684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 494933536}
+  deathScreen: {fileID: 0}
   bg: {fileID: 693778448}
   bar: {fileID: 1063996006}
   label: {fileID: 28420966}
