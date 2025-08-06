@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-
     public GameObject Player;
+    public GameObject deathScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,9 @@ public class FollowCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
+        if (!deathScreen.activeSelf)
+        {
+            transform.position = new Vector3(Player.transform.position.x, transform.position.y, transform.position.z);
+        }
     }
 }

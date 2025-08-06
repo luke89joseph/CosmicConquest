@@ -658,6 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 634516478}
   circle: {fileID: 488632641}
+  deathScreen: {fileID: 1232901093}
 --- !u!114 &239007977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 634516478}
+  deathScreen: {fileID: 1232901093}
   bg: {fileID: 188340654}
   bar: {fileID: 1684028932}
   label: {fileID: 1172857894}
@@ -3708,6 +3710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+  deathScreen: {fileID: 1232901093}
 --- !u!114 &1560667897
 MonoBehaviour:
   m_ObjectHideFlags: 0
