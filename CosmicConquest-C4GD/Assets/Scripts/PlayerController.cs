@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             
         }
         rb.velocity = new Vector2(nextVelocityX, nextVelocityY);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
