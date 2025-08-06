@@ -8,6 +8,7 @@ TagManager:
   - RightTrigger
   - projectile
   - Enemy
+  - Death Screen
   layers:
   - Default
   - TransparentFX
