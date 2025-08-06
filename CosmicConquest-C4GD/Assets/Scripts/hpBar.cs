@@ -30,6 +30,11 @@ public class hpBar : MonoBehaviour
 
         percent = curr / max;
 
+        if (player == null)
+        {
+            percent = 0f;
+        }
+
         bar.fillAmount = percent;
         label.text = "" + Mathf.RoundToInt(percent * 100) + "%";
         //print(percent);

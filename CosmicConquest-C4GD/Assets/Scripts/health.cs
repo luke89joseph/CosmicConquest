@@ -8,9 +8,12 @@ public class Health : MonoBehaviour
     public float currHP = 0f;
     public bool player;
     private Rigidbody2D rb;
+    public GameObject deathScreen;
     // Start is called before the first frame update
     void Start()
     {
+        deathScreen = GameObject.FindWithTag("Death Screen");
+        deathScreen.SetActive(false);
         currHP = maxHP;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -21,7 +24,12 @@ public class Health : MonoBehaviour
 
         if (currHP <= 0)
         {
+            if (player)
+            {
+                deathScreen.SetActive(true);
+            }
             Destroy(gameObject);
+   
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
