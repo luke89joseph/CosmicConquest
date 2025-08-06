@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class dashUI : MonoBehaviour
 {
@@ -22,11 +23,21 @@ public class dashUI : MonoBehaviour
         if (counter > 0)
         {
             circle.color = new Color(0.9f, 0f, 0f);
-        }
+
+            if (SceneManager.GetActiveScene().name == "Level 2")
+                {
+                    circle.color = new Color(0.902f, 0.675f, 0f);
+                    //new Color(0.4f, 0.302f, 0f); 
+                }
+            }
         else
         {
             circle.color = new Color(0.4f, 0f, 0f);
-        }
+                if (SceneManager.GetActiveScene().name == "Level 2")
+                {
+                    circle.color = new Color(0.4f, 0.302f, 0f);
+                }
+            }
     }
 }
 }
