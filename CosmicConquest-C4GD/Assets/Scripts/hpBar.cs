@@ -36,6 +36,8 @@ public class hpBar : MonoBehaviour
             if (player == null)
             {
                 percent = 0f;
+                label.text = "0%";
+                bar.fillAmount = 0f;
             }
 
             bar.fillAmount = percent;
