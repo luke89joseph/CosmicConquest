@@ -20,13 +20,13 @@ public class PlayerController : MonoBehaviour
     public float dashCounter;
     private float dashCoolCounter;
     private Animator anim;
-    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         activeSpeed = moveSpeed;
+       
     }
 
     // Update is called once per frame
@@ -75,4 +75,5 @@ public class PlayerController : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
     }
+    
 }
