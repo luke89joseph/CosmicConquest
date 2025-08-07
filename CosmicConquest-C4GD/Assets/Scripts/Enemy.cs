@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,15 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        if (SceneManager.GetActiveScene().name == "Level 2")
+        {
+            health += 3;
+        }
+        else if (SceneManager.GetActiveScene().name == "Level 3")
+        {
+            health *= 2;
+        }
 
     }
 
