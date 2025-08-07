@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("xSpeed", Mathf.Abs(nextVelocityX));
         if (transform.position.y < -50)
         {
+            gameObject.GetComponent<Health>().TakeDamage(1000);
             Destroy(gameObject);
         }
     }
