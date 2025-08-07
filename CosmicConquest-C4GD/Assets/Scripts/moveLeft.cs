@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveRight : MonoBehaviour
+public class moveLeft : MonoBehaviour
 {
     public float speed = 20f;
     // Start is called before the first frame update
@@ -14,8 +14,8 @@ public class moveRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * Time.deltaTime * speed );
-        if (transform.position.x > 200)
+        transform.Translate(Vector2.left * Time.deltaTime * speed );
+        if (transform.position.x < -200)
         {
             Destroy(gameObject);
         }
@@ -27,5 +27,4 @@ public class moveRight : MonoBehaviour
             Destroy(gameObject) ;
         }
     }
-    
 }
