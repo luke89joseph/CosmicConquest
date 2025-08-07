@@ -376,7 +376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now Bard is emperor of the Universe, all thanks to you
+  m_text: Now Bard is Emperor of the Universe, all thanks to you
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ac191544b230d413fae68c62f0b7596e, type: 2}
   m_sharedMaterial: {fileID: -5914083398774236864, guid: ac191544b230d413fae68c62f0b7596e, type: 2}
