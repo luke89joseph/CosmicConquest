@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheckPoint;
     public LayerMask groundLayer;
     float groundCheckRadius = 0.2f;
-    public GameObject projectilePrefab;
+    public GameObject projectileRightPrefab;
+    public GameObject projectileLeftPrefab;
     private float activeSpeed;
     public float dashSpeed;
     public float dashLength = 0.5f;
@@ -20,19 +21,31 @@ public class PlayerController : MonoBehaviour
     public float dashCounter;
     private float dashCoolCounter;
     private Animator anim;
+    public bool isRight;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         activeSpeed = moveSpeed;
-       
+       isRight = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         horInput = Input.GetAxisRaw("Horizontal");
+        if (horInput < 0)
+        {
+            transform.localScale = new Vector3(-0.6822429f, 0.6665732f, 1);
+            isRight = false;
+        }
+        else if (horInput > 0)
+        {
+            transform.localScale = new Vector3(0.6822429f, 0.6665732f, 1);
+            isRight = true;
+        }
         float nextVelocityX = horInput * activeSpeed;
         float nextVelocityY = rb.velocity.y;
         bool isGrounded = checkGround();
@@ -44,7 +57,14 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(nextVelocityX, nextVelocityY);
         if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            if (isRight)
+            {
+                
+                Instantiate(projectileRightPrefab, transform.position, projectileRightPrefab.transform.rotation);
+            }else if (!isRight)
+            {
+                Instantiate(projectileLeftPrefab, transform.position, projectileLeftPrefab.transform.rotation);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {

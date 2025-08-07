@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class EndPoint : MonoBehaviour
+
+public class Enemy2 : MonoBehaviour
 {
-    
+    private Rigidbody2D rb;
+    public float speed = 5f;
+    public bool isLeft = true;
+    public float health = 5f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -18,12 +21,10 @@ public class EndPoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("projectile"))
         {
-            if (SceneManager.GetActiveScene().Equals("Level 1"))
-            {
-                SceneManager.LoadScene("Level 2");
-            }
+            Destroy(collision.gameObject);
+            health--;
         }
     }
 }

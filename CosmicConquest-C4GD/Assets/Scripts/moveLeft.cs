@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-public class EndPoint : MonoBehaviour
+
+public class moveLeft : MonoBehaviour
 {
-    
+    public float speed = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,16 +14,17 @@ public class EndPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector2.left * Time.deltaTime * speed );
+        if (transform.position.x < -200)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
-            if (SceneManager.GetActiveScene().Equals("Level 1"))
-            {
-                SceneManager.LoadScene("Level 2");
-            }
+            Destroy(gameObject) ;
         }
     }
 }
