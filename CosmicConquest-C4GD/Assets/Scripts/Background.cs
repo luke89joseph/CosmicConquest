@@ -5,10 +5,11 @@ using UnityEngine;
 public class Background : MonoBehaviour
 {
     float repeatWidth;
+    public float scale =1f ;
     void Start()
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        repeatWidth = collider.size.x;
+        repeatWidth = collider.size.x * scale;
     }
 
     // Update is called once per frame
