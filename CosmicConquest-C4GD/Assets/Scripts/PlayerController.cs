@@ -38,12 +38,12 @@ public class PlayerController : MonoBehaviour
         horInput = Input.GetAxisRaw("Horizontal");
         if (horInput < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.6822429f, 0.6665732f, 1);
             isRight = false;
         }
         else if (horInput > 0)
         {
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(0.6822429f, 0.6665732f, 1);
             isRight = true;
         }
         float nextVelocityX = horInput * activeSpeed;

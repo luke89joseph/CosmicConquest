@@ -20,7 +20,10 @@ public class EndPoint : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level 2");
+            if (SceneManager.GetActiveScene().Equals("Level 1"))
+            {
+                SceneManager.LoadScene("Level 2");
+            }
         }
     }
 }
