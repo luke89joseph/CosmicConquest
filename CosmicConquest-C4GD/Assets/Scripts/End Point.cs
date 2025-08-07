@@ -18,11 +18,18 @@ public class EndPoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player"))
         {
-            if (SceneManager.GetActiveScene().Equals("Level 1"))
+         
+            if (SceneManager.GetActiveScene().name.Equals("Level 1"))
             {
+                
                 SceneManager.LoadScene("Level 2");
+            }else if(SceneManager.GetActiveScene().name.Equals("Level 2"))
+            {
+                
+                SceneManager.LoadScene("Level 3");
             }
         }
     }

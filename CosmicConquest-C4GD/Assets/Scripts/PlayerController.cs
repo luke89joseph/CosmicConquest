@@ -90,6 +90,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Grounded", checkGround());
         anim.SetFloat("ySpeed", nextVelocityY);
         anim.SetFloat("xSpeed", Mathf.Abs(nextVelocityX));
+        if (transform.position.y < -50)
+        {
+            Destroy(gameObject);
+        }
     }
     bool checkGround()
     {
