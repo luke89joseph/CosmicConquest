@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private float dashCoolCounter;
     private Animator anim;
     public bool isRight;
+
     // Start is called before the first frame update
     void Start()
     {
