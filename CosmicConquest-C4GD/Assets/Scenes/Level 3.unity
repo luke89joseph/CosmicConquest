@@ -291,7 +291,7 @@ MonoBehaviour:
   projectileRightPrefab: {fileID: 161990037161868114, guid: 71059a2cab1457341be82ae0aee24fe7, type: 3}
   projectileLeftPrefab: {fileID: 161990037161868114, guid: b9caff2edc41d4a4e8252d5d121148a9, type: 3}
   dashSpeed: 25
-  dashLength: 0.25
+  dashLength: 0.3
   dashCoolDown: 1
   dashCounter: 0
   isRight: 0

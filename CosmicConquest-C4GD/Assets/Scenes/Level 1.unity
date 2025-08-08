@@ -2718,7 +2718,7 @@ MonoBehaviour:
   timeCounter: 0
   minutes: 0
   seconds: 0
-  timerText: {fileID: 0}
+  timerText: {fileID: 17009786}
 --- !u!4 &1078115674
 Transform:
   m_ObjectHideFlags: 0
