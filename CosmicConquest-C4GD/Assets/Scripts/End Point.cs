@@ -21,14 +21,15 @@ public class EndPoint : MonoBehaviour
         
         if (collision.CompareTag("Player"))
         {
-         
+            print(1);
             if (SceneManager.GetActiveScene().name.Equals("Level 1"))
             {
+                
                 
                 SceneManager.LoadScene("Level 2");
             }else if(SceneManager.GetActiveScene().name.Equals("Level 2"))
             {
-                
+                print(2);
                 SceneManager.LoadScene("Level 3");
             }
         }
