@@ -26,9 +26,17 @@ public class Timer : MonoBehaviour
             seconds = Mathf.FloorToInt(timeCounter - minutes * 60);
             if (timerText != null) timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
+        else if (SceneManager.GetActiveScene().name.Equals("MainMenu"))
+        {
+            timeCounter = 0f;
+            minutes = 0;
+            seconds = 0;
+            if (timerText != null) timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
         else
         {
             if (timerText != null) timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
+
     }
 }
