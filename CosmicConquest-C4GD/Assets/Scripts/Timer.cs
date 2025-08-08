@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name != "Win")
+        if (!SceneManager.GetActiveScene().name.Equals("Win"))
         {
             timeCounter += Time.deltaTime;
             minutes = Mathf.FloorToInt(timeCounter / 60);
